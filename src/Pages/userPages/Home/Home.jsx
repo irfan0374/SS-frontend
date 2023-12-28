@@ -8,6 +8,7 @@ import { UserCircleIcon } from "@heroicons/react/24/solid";
 import SearchFilter from '../../../Component/userComponent.js/SearchFilter';
 import Footer from '../../../Component/CommonComponent/Footer'
 import { useSelector } from 'react-redux';
+import Image from "../../../../public/bannerOne.jpg"
 // Lazy-loaded components
 const LazyPropertyCards = lazy(() => import('../../../Component/userComponent.js/Card/propertyCards'));
 const LazyBudgetCard = lazy(() => import('../../../Component/userComponent.js/Card/budgetCard'));
@@ -43,7 +44,7 @@ const Homepage = () => {
     <>
     <div className='h-screen '>
       <div className="hero h-screen" style={{
-        backgroundImage: "url('/public/bannerOne.jpg')",
+        backgroundImage: `url(${Image})`,
         backgroundSize: 'cover',
         backgroundRepeat: 'no-repeat',
         backgroundPosition: 'center',
