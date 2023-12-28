@@ -8,7 +8,7 @@ import { UserCircleIcon } from "@heroicons/react/24/solid";
 import SearchFilter from '../../../Component/userComponent.js/SearchFilter';
 import Footer from '../../../Component/CommonComponent/Footer'
 import { useSelector } from 'react-redux';
-import Image from "../../../../public/bannerOne.jpg"
+import Image from "../../../../public/buildings/Appartment.jpg"
 // Lazy-loaded components
 const LazyPropertyCards = lazy(() => import('../../../Component/userComponent.js/Card/propertyCards'));
 const LazyBudgetCard = lazy(() => import('../../../Component/userComponent.js/Card/budgetCard'));
