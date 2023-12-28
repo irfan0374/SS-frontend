@@ -6,7 +6,7 @@ import { Link, useLocation } from 'react-router-dom';
 import { useSelector } from 'react-redux';
 import { hideProperty } from '../../Api/partnerApi';
 import { toast } from 'react-toastify';
-import Image from '../../../../public/other/noBuliding.png'
+import Image from '../../../public/other/noBuliding.png'
 
 
 const DetailePage = ({ property }) => {
