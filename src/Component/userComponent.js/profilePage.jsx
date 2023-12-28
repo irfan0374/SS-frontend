@@ -6,6 +6,7 @@ import { updateProfile } from '../../Api/userApi'
 import { editProfile } from '../../schema/editProfile'
 import Loading from '../Loading/Loading'
 import { updataImage } from '../../Api/userApi'
+import Images from '../../../public/other/Account.png'
 
 const ProfilePage = () => {
   const [profile, setProfile] = useState()
@@ -103,7 +104,7 @@ const ProfilePage = () => {
                  
                   <img
                   src=
-                  {profile?.profile ? profile?.profile : "/public/Account.png"}
+                  {profile?.profile ? profile?.profile : Images}
 
                   className={"rounded-full object-cover w-56 h-40 lg:w-36 lg:h-36"}
                   alt=""

@@ -113,7 +113,7 @@ const PartnerHome = () => {
             ) : (
               <div className=' mx-20 mediumSm:mx-64' >
 
-                <img src="/public/noProperty.png" className='w-52 h-32 lg:w-72 lg:h-56 lg:mx-48 ' alt="No Property" />
+                <img src="https://res.cloudinary.com/dlcnf8yfh/image/upload/v1703787356/buildings/onsdkn3aqxngss39pstf.png" className='w-52 h-32 lg:w-72 lg:h-56 lg:mx-48 ' alt="No Property" />
                 
               </div> 
             )}

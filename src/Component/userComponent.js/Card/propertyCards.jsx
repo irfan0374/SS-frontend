@@ -1,5 +1,10 @@
 import React from 'react'
 import { useNavigate } from 'react-router-dom'
+import Image1 from "../../../../public/buildings/flat.jpg"
+import Image2 from "../../../../public/buildings/Appartment.jpg"
+import Image3 from "../../../../public/buildings/house.jpg"
+import Image4 from "../../../../public/buildings/officeSpace.jpg"
+
 const propertyCards = () => {
 
     const navigate = useNavigate()
@@ -14,7 +19,7 @@ const propertyCards = () => {
                         <div className="group relative m-0  lg:h-48 lg:w-48 md:h-80 md:w-80 sm:h-96 sm:w-96 w-72 rounded-xl shadow-xl ring-gray-900/5 sm:mx-5 sm:w-sm" onClick={() => navigate('/CardDetails', { state:{data:"Flat",value:"property"}})}>
                             <div className="z-10 lg:h-48 lg:w-48 md:h-80 md:w-80 sm:h-96 sm:w-96 overflow-hidden rounded-xl border border-gray-200 opacity-80 transition duration-300 ease-in-out group-hover:opacity-100 dark:border-gray-700 dark:opacity-70">
                                 <img
-                                    src="/public/buildings/flat.jpg"
+                                    src={Image1}
                                     className="animate-fade-in block h-full w-full scale-100 transform object-cover object-center opacity-100 transition duration-300 group-hover:scale-110"
                                     alt=""
                                 />
@@ -35,7 +40,7 @@ const propertyCards = () => {
                         <div className="group relative m-0  lg:h-48 lg:w-48 md:h-80 md:w-80 sm:h-96 sm:w-96 w-72 rounded-xl shadow-xl ring-gray-900/5 sm:mx-5 sm:w-sm" onClick={() => navigate('/CardDetails', { state: {data:"Appartment",value:"property"} })}>
                             <div className="z-10 lg:h-48 lg:w-48 md:h-80 md:w-80 sm:h-96 sm:w-96 overflow-hidden rounded-xl border border-gray-200 opacity-80 transition duration-300 ease-in-out group-hover:opacity-100 dark:border-gray-700 dark:opacity-70">
                                 <img
-                                    src="/public/buildings/Appartment.jpg"
+                                    src={Image2}
                                     className="animate-fade-in block h-full w-full scale-100 transform object-cover object-center opacity-100 transition duration-300 group-hover:scale-110"
                                     alt=""
                                 />
@@ -55,7 +60,7 @@ const propertyCards = () => {
                         <div className="group relative m-0  lg:h-48 lg:w-48 md:h-80 md:w-80 sm:h-96 sm:w-96 w-72 rounded-xl shadow-xl ring-gray-900/5 sm:mx-5 sm:w-sm" onClick={() => navigate('/CardDetails', { state: {data:"House",value:"property"}})}>
                             <div className="z-10 lg:h-48 lg:w-48 md:h-80 md:w-80 sm:h-96 sm:w-96 overflow-hidden rounded-xl border border-gray-200 opacity-80 transition duration-300 ease-in-out group-hover:opacity-100 dark:border-gray-700 dark:opacity-70">
                                 <img
-                                    src='/public/buildings/house.jpg'
+                                    src={Image3}
                                     className="animate-fade-in block h-full w-full scale-100 transform object-cover object-center opacity-100 transition duration-300 group-hover:scale-110"
                                     alt=""
                                 />
@@ -74,7 +79,7 @@ const propertyCards = () => {
                         <div className="group relative m-0  lg:h-48 lg:w-48 md:h-80 md:w-80 sm:h-96 sm:w-96 w-72 rounded-xl shadow-xl ring-gray-900/5 sm:mx-5 sm:w-sm" onClick={() => navigate('/CardDetails', { state:{data:"Office",value:"property"} })}>
                             <div className="z-10  lg:h-48 lg:w-48 md:h-80 md:w-80 sm:h-96 sm:w-96 w-72 overflow-hidden rounded-xl border border-gray-200 opacity-80 transition duration-300 ease-in-out group-hover:opacity-100 dark:border-gray-700 dark:opacity-70">
                                 <img
-                                    src='/public/buildings/officeSpace.jpg'
+                                    src={Image4}
                                     className="animate-fade-in block h-full w-full scale-100 transform object-cover object-center opacity-100 transition duration-300 group-hover:scale-110"
                                     alt=""
                                 />

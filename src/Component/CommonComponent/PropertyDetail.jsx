@@ -1,4 +1,6 @@
 import { React } from 'react'
+import Image from "../../../public/other/noBuliding.png"
+
 
 
 
@@ -24,7 +26,7 @@ const PropertyDetail = ({ myProperty }) => {
                         <div>
 
                         </div>
-                        <img className=' object-cover w-full h-96 rounded-md' src={myProperty.propertyImage[0]? myProperty.propertyImage[1] :"/public/noBuliding.png"} alt="mainImage not found" />
+                        <img className=' object-cover w-full h-96 rounded-md' src={myProperty.propertyImage[0]? myProperty.propertyImage[1] :Image} alt="mainImage not found" />
 
 
                     </div>
@@ -32,13 +34,13 @@ const PropertyDetail = ({ myProperty }) => {
 
                         <div className="grid grid-cols-2 gap-2 ">
 
-                            <img className='object-cover w-full rounded-md' src={myProperty.propertyImage[1]? myProperty.propertyImage[1] :"/public/noBuliding.png"} alt=" Image not found" />
+                            <img className='object-cover w-full rounded-md' src={myProperty.propertyImage[1]? myProperty.propertyImage[1] :Image} alt=" Image not found" />
 
-                            <img className='object-cover w-full rounded-md' src={myProperty.propertyImage[2]? myProperty.propertyImage[2]:"/public/noBuliding.png"} alt=" 2 Image not found" />
+                            <img className='object-cover w-full rounded-md' src={myProperty.propertyImage[2]? myProperty.propertyImage[2]:Image} alt=" 2 Image not found" />
 
-                            <img className='object-cover w-full rounded-md' src={myProperty.propertyImage[3]? myProperty.propertyImage[3]:"/public/noBuliding.png"} alt="3 Image not found" />
+                            <img className='object-cover w-full rounded-md' src={myProperty.propertyImage[3]? myProperty.propertyImage[3]:Image} alt="3 Image not found" />
 
-                            <img className='object-cover w-full rounded-md' src={myProperty.propertyImage[4]? myProperty.propertyImage[4]:"/public/noBuliding.png"} alt=" 4 Image not found" />
+                            <img className='object-cover w-full rounded-md' src={myProperty.propertyImage[4]? myProperty.propertyImage[4]:Image} alt=" 4 Image not found" />
 
 
 

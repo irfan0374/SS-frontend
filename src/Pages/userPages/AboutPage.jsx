@@ -30,7 +30,7 @@ const AboutPage = () => {
 
                     </div>
                     <div className=' lg:w-1/2  '>
-                        <img src="/public/other/future.jpeg " className='rounded-md w-full h-56 lg:h-96 ' alt="" />
+                        <img src="https://res.cloudinary.com/dlcnf8yfh/image/upload/v1703787387/buildings/nhlylfall9byw2tycboj.jpg" className='rounded-md w-full h-56 lg:h-96 ' alt="" />
                     </div>
                 </div>
 

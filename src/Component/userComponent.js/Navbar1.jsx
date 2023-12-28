@@ -3,6 +3,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import { Link, useNavigate } from 'react-router-dom';
 import { userLogout } from '../../Redux/Slice/userSlice';
 import { findUser } from '../../Api/userApi';
+import Image from '../../../public/other/Seven_Sky.png'
 
 const Navbar = () => {
   const [color, setColor] = useState(false);
@@ -78,7 +79,7 @@ const Navbar = () => {
         <div className="flex items-center justify-between mx-auto  p-2">
           <Link to={'/'}>
           <div className="flex-none">
-            <img src="/public/Seven_Sky.png" className="h-16 w-auto" alt="sevenSky Logo" />
+            <img src={Image} className="h-16 w-auto" alt="sevenSky Logo" />
           </div>
           </Link>
 

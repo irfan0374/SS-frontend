@@ -3,6 +3,7 @@ import InputEmoji from "react-input-emoji";
 import { findPartner } from '../../../Api/chatAxios';
 import { addMessage, getMessage } from '../../../Api/messageAxios';
 import Conversation from './Conversation';
+import Image from '../../../../public/other/Account.png'
 
 const Chatbox = ({chat,currentUser,setMessage,messages,socket}) => {
     const[partnerData,setPartnerData]=useState(null)
@@ -89,7 +90,7 @@ const Chatbox = ({chat,currentUser,setMessage,messages,socket}) => {
                     </svg>
                   </span>
                   <img
-                    src={partnerData?.profile || "/public/Account.png"}
+                    src={partnerData?.profile ||Image}
                     alt=""
                     className="w-14 lg:w-12 h-10 lg:h-12 rounded-full"
                   ></img>

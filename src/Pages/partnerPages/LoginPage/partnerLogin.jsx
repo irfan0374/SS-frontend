@@ -51,7 +51,7 @@ const PartnerLoginComponent = () => {
             <div
               className="w-full  lg:w-1/2 flex flex-col items-center justify-center p-20 bg-no-repeat bg-cover bg-center"
               style={{
-                backgroundImage: "url(/public/loginImage/partnerLogin.jpg)",
+                backgroundImage: "url('https://res.cloudinary.com/dlcnf8yfh/image/upload/v1703787499/buildings/zju0mkqlgty5s1yeblcc.jpg')",
               }}>
               <div>
                 <p className="text-black">

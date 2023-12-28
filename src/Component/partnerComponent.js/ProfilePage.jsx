@@ -7,6 +7,8 @@ import Loading from '../Loading/Loading'
 import { partnerImage } from '../../Api/partnerApi'
 import { toast } from 'react-toastify'
 import "react-toastify/dist/ReactToastify.css";
+import Image from "../../../public/other/Account.png"
+
 
 
 
@@ -114,7 +116,7 @@ const ProfilePage = () => {
 
                 ) : (<img
                   src=
-                  {profile?.profile ? profile.profile : "/public/Account.png"}
+                  {profile?.profile ? profile.profile : Image}
 
                   className={"rounded-full object-cover w-36 h-36"}
                   alt=""

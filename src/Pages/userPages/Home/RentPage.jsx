@@ -120,7 +120,7 @@ const RentPage = () => {
                   {currentRecords.length < 1 ? (
                     <div>
                       <img
-                        src='/public/noProperty.png'
+                        src='https://res.cloudinary.com/dlcnf8yfh/image/upload/v1703787356/buildings/onsdkn3aqxngss39pstf.png'
                         alt='No Property'
                       />
                     </div>

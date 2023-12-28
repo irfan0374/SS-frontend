@@ -12,6 +12,7 @@ import { partnerLogout } from '../../Redux/Slice/partnerSlice'
 import { useNavigate } from 'react-router-dom'
 import { Link } from 'react-router-dom'
 import { MdManageAccounts } from "react-icons/md";
+import Image from "../../../public/other/Logo_White.png"
 
 
 
@@ -58,7 +59,7 @@ const Navbar = () => {
       <div className="navbar bg-black">
         <div className="flex-1">
           <div className="flex-none">
-            <img src="/public/Logo_White.png" className="h-16 w-auto" alt="sevenSky Logo" />
+            <img src={Image} className="h-16 w-auto" alt="sevenSky Logo" />
           </div>
         </div>
         <div className="flex-none space-x-6">

@@ -1,5 +1,6 @@
 import React, { useEffect,useState } from 'react'
 import { findPartner } from '../../../Api/chatAxios'
+import Image from '../../../../public/other/Account.png'
 
 
 const ChatList = ({data,currentUserId}) => {
@@ -27,7 +28,7 @@ const ChatList = ({data,currentUserId}) => {
         <div className="flex  px-5 py-1 justify-center items-center border-2 border-gray-300 rounded-xl bg-gray-200 hover:bg-gray-50">
   <div className="w-1/4">
     <img
-      src={partnerData?.profile || "/images/person-304893_1280.png"}
+      src={partnerData?.profile ||Image}
       className="object-cover h-12 w-12 rounded-full"
       alt={`Profile of ${partnerData?.name}`}
     />

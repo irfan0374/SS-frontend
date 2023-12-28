@@ -6,6 +6,7 @@ import { loadStripe } from '@stripe/stripe-js';
 import { toast } from 'react-toastify';
 import { useSelector } from 'react-redux';
 import { createSubscription } from '../../Api/userApi';
+import Image from '../../../public/other/premium.png'
 
 let stripePromise;
 const getstrip = () => {
@@ -50,7 +51,7 @@ const PremiumPage = () => {
             <div className=' h-screen pb-6'>
                 <div className=' flex mx-20 mediumSm:mx-36 lg:mx-44 justify-center '>
                     <div className=' mt-3 ' >
-                        <img src="/public/premium.png" alt=""
+                        <img src="https://res.cloudinary.com/dlcnf8yfh/image/upload/v1703787357/buildings/iuwq1vyn1vbglmx2sjrg.png" alt=""
                             className='w-32 mx-16 '
                         />
                         <div className=' text-center font-mono text-3xl lg:text-4xl font-bold text-transparent bg-gradient-to-r bg-clip-text from-yellow-700 to-yellow-600'>

@@ -4,6 +4,8 @@ import { Link } from 'react-router-dom'
 import { createChat } from '../../Api/chatAxios'
 import { useSelector } from 'react-redux'
 import { findUser } from '../../Api/userApi'
+import Image from '../../../public/other/Account.png'
+
 
 
 
@@ -52,7 +54,7 @@ const AgentCard = ({ partnerdata }) => {
                         <div className='w-1/4 h-80 b'>
                             <img
                                 className='w-full h-full object-fill'
-                                src={partnerdata?.profile ? partnerdata?.profile : '/public/Account.png'} />
+                                src={partnerdata?.profile ? partnerdata?.profile : Image} />
                         </div>
                         <div className='w-full h-28 space-y-5'  >
                             <div className=' tracking-normal font-bold text-xl p-6 border-gray-400 border-b-2'>

@@ -1,4 +1,5 @@
 import React from 'react';
+import Image from "../../../public/other/Seven_Sky.png"
 
 const Footer = () => {
   return (
@@ -7,7 +8,7 @@ const Footer = () => {
         <div>
           <img
             className=" h-9 lg:h-14 w-auto"
-            src="/public/Seven_Sky.png"
+            src={Image}
             alt="Logo"
           />
         </div>

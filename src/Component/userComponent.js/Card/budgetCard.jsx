@@ -1,5 +1,9 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
+import Image1 from "../../../../public/buildings/room5.jpg"
+import Image2 from "../../../../public/buildings/bedroom2.jpg"
+import Image3 from "../../../../public/buildings/room3.jpg"
+import Image4 from "../../../../public/buildings/room4.jpg"
 
 const BudgetCard = () => {
   const navigate = useNavigate();
@@ -13,7 +17,7 @@ const BudgetCard = () => {
             <div className="group relative m-0 lg:h-48 lg:w-48 md:h-80 md:w-80 sm:h-96 sm:w-96 w-72 rounded-xl shadow-xl ring-gray-900/5 sm:mx-5 sm:w-sm" onClick={() => navigate('/CardDetails', { state: { data: 100000, value: "budget" } })}>
               <div className="z-10 lg:h-48 lg:w-48 md:h-80 md:w-80 sm:h-96 sm:w-96 overflow-hidden rounded-xl border border-gray-200 opacity-80 transition duration-300 ease-in-out group-hover:opacity-100 dark:border-gray-700 dark:opacity-70">
                 <img
-                  src='/public/buildings/room5.jpg'
+                  src={Image1}
                   className="animate-fade-in block h-full w-full scale-100 transform object-cover object-center opacity-100 transition duration-300 group-hover:scale-110"
                   alt=""
                 />
@@ -30,7 +34,7 @@ const BudgetCard = () => {
             <div className="group relative m-0 lg:h-48 lg:w-48 md:h-80 md:w-80 sm:h-96 sm:w-96 w-72 rounded-xl shadow-xl ring-gray-900/5 sm:mx-5 sm:w-sm" onClick={() => navigate('/CardDetails', { state: { data: 300000, value: "budget" } })}>
               <div className="z-10 lg:h-48 lg:w-48 md:h-80 md:w-80 sm:h-96 sm:w-96 overflow-hidden rounded-xl border border-gray-200 opacity-80 transition duration-300 ease-in-out group-hover:opacity-100 dark:border-gray-700 dark:opacity-70">
                 <img
-                  src='/public/buildings/bedroom2.jpg'
+                  src={Image2}
                   className="animate-fade-in block h-full w-full scale-100 transform object-cover object-center opacity-100 transition duration-300 group-hover:scale-110"
                   alt=""
                 />
@@ -47,7 +51,7 @@ const BudgetCard = () => {
             <div className="group relative m-0 lg:h-48 lg:w-48 md:h-80 md:w-80 sm:h-96 sm:w-96 w-72 rounded-xl shadow-xl ring-gray-900/5 sm:mx-5 sm:w-sm" onClick={() => navigate('/CardDetails', { state: { data: 1500000, value: "budget" } })}>
               <div className="z-10 lg:h-48 lg:w-48 md:h-80 md:w-80 sm:h-96 sm:w-96 overflow-hidden rounded-xl border border-gray-200 opacity-80 transition duration-300 ease-in-out group-hover:opacity-100 dark:border-gray-700 dark:opacity-70">
                 <img
-                  src='/public/buildings/room3.jpg'
+                  src={Image3}
                   className="animate-fade-in block h-full w-full scale-100 transform object-cover object-center opacity-100 transition duration-300 group-hover:scale-110"
                   alt=""
                 />
@@ -64,7 +68,7 @@ const BudgetCard = () => {
             <div className="group relative m-0 lg:h-48 lg:w-48 md:h-80 md:w-80 sm:h-96 sm:w-96 w-72 rounded-xl shadow-xl ring-gray-900/5 sm:mx-5 sm:w-sm" onClick={() => navigate('/CardDetails', { state: { data: 5000000, value: "budget" } })}>
               <div className="z-10 lg:h-48 lg:w-48 md:h-80 md:w-80 sm:h-96 sm:w-96 overflow-hidden rounded-xl border border-gray-200 opacity-80 transition duration-300 ease-in-out group-hover:opacity-100 dark:border-gray-700 dark:opacity-70">
                 <img
-                  src='/public/buildings/room2.jpg'
+                  src={Image4}
                   className="animate-fade-in block h-full w-full scale-100 transform object-cover object-center opacity-100 transition duration-300 group-hover:scale-110"
                   alt=""
                 />

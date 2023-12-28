@@ -47,7 +47,7 @@ const AdminLogin = () => {
               <div
                 className="w-full lg:w-1/2 flex flex-col items-center justify-center p-12 bg-no-repeat bg-cover bg-center"
                 style={{
-                  backgroundImage: "url(/public/loginImage/adminLogin.jpg)",
+                  backgroundImage: 'url("https://res.cloudinary.com/dlcnf8yfh/image/upload/v1703787505/buildings/tcjejakoixwjsulzpctv.jpg")',
                 }}
               >
                 

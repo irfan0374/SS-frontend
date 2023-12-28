@@ -48,7 +48,7 @@ const SearchProperty = () => {
             <div className='flex flex-col justify-center items-center'>
             <img
               className='w-80 h-64 transition-transform transform hover:scale-105'
-              src='/public/noProperty.png'
+              src='https://res.cloudinary.com/dlcnf8yfh/image/upload/v1703787356/buildings/onsdkn3aqxngss39pstf.png'
               alt='No Property Available'
             />
             <h1 className='text-2xl font-bold mx-12'>No Property Available</h1>

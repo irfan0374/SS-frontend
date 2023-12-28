@@ -1,4 +1,4 @@
-import React, { useState, useRef, useEffect } from 'react'
+import React from 'react'
 import { useFormik } from 'formik'
 import { useNavigate, Link, Form } from 'react-router-dom'
 import { toast } from 'react-toastify'
@@ -7,6 +7,7 @@ import { userlogin } from '../../Api/userApi'
 import { useDispatch } from "react-redux";
 import { userLogin } from '../../Redux/Slice/userSlice'
 import GoogleButtonUser from "../../assets/googleLogin/UserGoogleLogin";
+import Image from '../../../public/loginImage/image1.jpg'
 
 
 const LoginPage = () => {
@@ -58,18 +59,10 @@ const LoginPage = () => {
             <div
               className="w-full lg:w-1/2 flex flex-col items-center justify-center p-12 bg-no-repeat bg-cover bg-center"
               style={{
-                backgroundImage: "url(/public/loginImage/image1.jpg)",
+                backgroundImage: `url(${Image})`,
               }}
             >
-              {/* <h1 className="text-gray-400 text-3xl mb-3">
-                Welcome to nestWay
-              </h1>
-              <div>
-                <p className="text-black">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean
-
-                </p>
-              </div> */}
+          
             </div>
             <div className="w-full lg-w-1/2 py-16 px-12">
               <div className="pb-2">
