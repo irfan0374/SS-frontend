@@ -17,9 +17,11 @@ export async function partnerKycUpload({partnerId,kycImage}){
             
         const data=await partnerAxiosInstance.patch('/partnerKycUpload',{partnerId,kycImage})
         return data;
-
-  
 }
+export const resentOtp=async(partnerId)=>{
+    const data=await partnerAxiosInstance.post('/resentOtp',{partnerId})
+    return data
+} 
 export async function addProperty(values){
     console.log({...values})
     

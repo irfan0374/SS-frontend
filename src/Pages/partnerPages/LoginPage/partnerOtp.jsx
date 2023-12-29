@@ -3,7 +3,7 @@ import { useLocation, useNavigate } from "react-router-dom";
 import { useFormik } from "formik";
 import { otpSchema } from "../../../schema/otpValidation";
 import { toast } from 'react-toastify';
-import {partnerOtpVerification} from '../../../Api/partnerApi'
+import {partnerOtpVerification, resentOtp} from '../../../Api/partnerApi'
 
 
 const PartnerOtp = () => {
@@ -22,6 +22,18 @@ const PartnerOtp = () => {
         else {
             setShowResendButton(true)
         }
+    }
+    const resendOTP=async()=>{
+      try{
+        const res=await resentOtp(partnerId)
+        if(res?.status==200){
+          toast.info(res?.data?.message)
+        }
+
+      }catch(error){
+        toast.error("something went wrong")
+        console.log(error.message)
+      }
     }
 
 
