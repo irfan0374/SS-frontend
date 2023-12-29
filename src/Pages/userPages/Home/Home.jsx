@@ -52,7 +52,7 @@ const Homepage = () => {
           <Navbar />
         </div>
         <div>
-          {/* <SearchFilter /> */}
+          <SearchFilter />
         </div>
       </div>
 

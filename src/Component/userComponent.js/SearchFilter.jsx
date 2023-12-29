@@ -66,10 +66,7 @@ const SearchFilter = () => {
   useEffect(() => {
     TypesofProperty();
 
-    // Add event listener for clicks outside the container
     document.addEventListener('click', closeInputField);
-
-    // Clean up the event listener on component unmount
     return () => {
       document.removeEventListener('click', closeInputField);
     };
@@ -105,32 +102,26 @@ const SearchFilter = () => {
               <label htmlFor="propertyStatus" className="text-blue-500 block mb-2">
                 Property For
               </label>
-              <select
-                name="propertfor"
-                className="select w-full max-w-xs"
-                {...getFieldProps('propertfor')}
-                required=""
-              >
-                <option value="">Pick the purpose</option> {/* Remove 'selected' from here */}
-                {propertyFor.map((data) => (
-                  <option key={data} value={data}>
-                    {data}
-                  </option>
-                ))}
-              </select>
-              {/* <select
-                name="propertfor"
-                className="select w-full max-w-xs"
-                {...getFieldProps('propertfor')}
-                required=""
-              >
-                <option selected>Pick the purpose</option>
-                {propertyFor.map((data) => (
-                  <option key={data} value={data}>
-                    {data}
-                  </option>
-                ))}
-              </select> */}
+           
+
+                <select
+                  name="propertfor"
+                  className="select w-full max-w-xs"
+                  {...getFieldProps('propertfor')}
+                  required=""
+                >
+                  <option value="">Pick the purpose</option>
+                
+                   {propertyFor && propertyFor.length > 0 ? (
+                  propertyFor.map((data) => (
+                    <option key={data} value={data}>
+                      {data}
+                    </option>
+                  ))
+                ) : null}
+                </select>
+   
+
               {errors.propertfor && <p className="text-red-500 text-sm mt-1">{errors.propertfor}</p>}
             </div>
 
@@ -138,20 +129,23 @@ const SearchFilter = () => {
               <label htmlFor="propertyType" className="text-blue-500 block ">
                 Property Type
               </label>
+
               <select
                 name="propertytype"
                 className="select w-full max-w-xs "
                 {...getFieldProps('propertytype')}
-               
                 required=""
               >
-                <option value="">Pick the property Type</option> 
-                {propertyType.map((data) => (
-                  <option key={data} value={data}>
-                    {data}
-                  </option>
-                ))}
+                <option value="">Pick the property Type</option>
+                {propertyType && propertyType.length > 0 ? (
+                  propertyType.map((data) => (
+                    <option key={data} value={data}>
+                      {data}
+                    </option>
+                  ))
+                ) : null}
               </select>
+
               {errors.propertytype && <p className="text-red-500 text-sm mt-1">{errors.propertytype}</p>}
             </div>
           </div>

@@ -3,21 +3,21 @@ import Loading from '../Loading/Loading'
 import MainCard from '../CommonComponent/MainCard'
 import { BhkDataSales, salesBudeget, salesData } from '../../Api/userApi'
 
-const CardSaleDetails = ({datas,values}) => {
+const CardSaleDetails = ({ datas, values }) => {
 
   const [salesProperty, setSalesProperty] = useState([])
-  
-    useEffect(() => {
-      console.log("ehlho useEffect")
-      if(values==="property"){
+
+  useEffect(() => {
+    console.log("ehlho useEffect")
+    if (values === "property") {
       salesDetails()
-      }else if(values==="budget"){
-        salesBaseBudget()
-      }else{
-        propertyByBhk()
-      }
-  
-    }, [values])
+    } else if (values === "budget") {
+      salesBaseBudget()
+    } else {
+      propertyByBhk()
+    }
+
+  }, [values])
 
   const [loading, setLoading] = useState(false)
 
@@ -63,20 +63,21 @@ const CardSaleDetails = ({datas,values}) => {
   return (
     <>
 
-<>
-      {loading ? (<Loading />) : (<div>
+      <>
+        {loading ? (<Loading />) : (<div>
 
-        <div className=" grid md:flex justify-center grid-cols-1  lg:grid-cols-4 gap-2">
-        {salesProperty.map((data) => (
-          <div key={data._id}>
-            <MainCard property={data} />
-              </div>
-        ))}
+          <div className=" grid md:flex justify-center grid-cols-1  lg:grid-cols-4 gap-2">
+            {salesProperty.length > 0 ? (
+              salesProperty.map((data) => (
+                <div key={data._id}>
+                  <MainCard property={data} />
+                </div>
+              ))
+            ) : (<></>)}
+          </div>
+        </div>)}
+      </>
 
-        </div>
-      </div>)}
-    </>
-      
     </>
   )
 }

@@ -26,8 +26,8 @@ const SelectedSearchFilter = ({ selectedData, setLoading, typesofProperty }) => 
     );
     const [propertytype, setPropertyType] = useState(
         selectedData.propertytype
-        );
-        console.log(typesofProperty,"propertyForrr")
+    );
+    console.log(typesofProperty, "propertyForrr")
     const [selectedLocation, setSelectedLocation] = useState(
         selectedData.location
     )
@@ -80,39 +80,43 @@ const SelectedSearchFilter = ({ selectedData, setLoading, typesofProperty }) => 
                         <div>
                             <label htmlFor="propertyStatus" className="text-blue-500 block mb-2">
                                 Property For
-                            </label>
-                            <select
-                                name="propertfor"
+                            </label>   
+                                <select
+                                name="propertyFor"
                                 className="select w-full max-w-xs select-bordered select-sm w-full max-w-xs"
                                 value={values.propertfor}
-                                {...getFieldProps("propertfor")}
-                            >
-                               
-                                {propertyFor && propertyFor.map((data) => (
+                                {...getFieldProps("propertyfor")}
+                              >
+                                {propertyFor && propertyFor.length > 0 ? (
+                                  propertyFor.map((data) => (
                                     <option key={data} value={data}>
-                                        {data}
+                                      {data}
                                     </option>
-                                ))}
-                            </select>
+                                  ))
+                                ) : null}
+                              </select>
                         </div>
 
                         <div>
                             <label htmlFor="propertyType" className="text-blue-500 block mb-2">
                                 Property Type
                             </label>
-                            <select
-                                name="propertytype"
-                                className="select select-bordered select-sm w-full max-w-xs"
-                                value={values.propertytype}
-                                {...getFieldProps("propertytype")}
-                            >
-                                
-                                {propertyType && propertyType.map((data) => (
+                            {propertyType.length > 0 ? (
+                                <select
+                                    name="propertytype"
+                                    className="select select-bordered select-sm w-full max-w-xs"
+                                    value={values.propertytype}
+                                    {...getFieldProps("propertytype")}
+                                >
+                                      {propertyType && propertyType.length > 0 ? (
+                                  propertyType.map((data) => (
                                     <option key={data} value={data}>
-                                        {data}
+                                      {data}
                                     </option>
-                                ))}
-                            </select>
+                                  ))
+                                ) : null}
+                                </select>
+                            ) : (<></>)}
                         </div>
                     </div>
                     <div className='flex justify-center'>

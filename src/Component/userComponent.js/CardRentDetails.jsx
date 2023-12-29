@@ -71,11 +71,14 @@ const CardRentDetails = ({ datas, values }) => {
       {loading ? (<Loading />) : (<div>
 
         <div className=" grid md:flex justify-center grid-cols-1  lg:grid-cols-4 gap-2">
-          {RentProperty.map((data) => (
-            <div key={data._id}>
-              <MainCard property={data} />
-            </div>
-          ))}
+          {RentProperty.length > 0 ? (
+            RentProperty.map((data) => (
+              <div key={data._id}>
+                <MainCard property={data} />
+              </div>
+            ))
+          ) : (<></>)
+          }
 
         </div>
       </div>)}

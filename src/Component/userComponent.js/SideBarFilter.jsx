@@ -38,24 +38,29 @@ const SideBarFilter = ({ setProperty, filterproperty }) => {
     return (
       <>
         <div className="flex flex-col lg:border-1 border py-2">
-          <div className="px-2 border-b py-2">
-            <div className="flex justify-center px-2 py-1 border rounded-lg bg-gray-400 font-bold font-serif">
-              Property Type
-            </div>
-            {Object.keys(filterOption.propertyType).map((option) => (
-              <div key={option} className="flex px-2 py-1 border rounded-lg mt-1">
-                <input
-                  type="checkbox"
-                  className="checkbox"
-                  checked={filterOption.propertyType[option]}
-                  onChange={() => handleCheckBoxChange(option, 'propertyType')}
-                />
-                <label className="w-full py-2 ml-2 text-sm font-medium text-gray-900 dark:text-gray-300">
-                  {option}
-                </label>
-              </div>
-            ))}
-          </div>
+        <div className="px-2 border-b py-2">
+  <div className="flex justify-center px-2 py-1 border rounded-lg bg-gray-400 font-bold font-serif">
+    Property Type
+  </div>
+  {Object.keys(filterOption.propertyType).length > 0 ? (
+    Object.keys(filterOption.propertyType).map((option) => (
+      <div key={option} className="flex px-2 py-1 border rounded-lg mt-1">
+        <input
+          type="checkbox"
+          className="checkbox"
+          checked={filterOption.propertyType[option]}
+          onChange={() => handleCheckBoxChange(option, 'propertyType')}
+        />
+        <label className="w-full py-2 ml-2 text-sm font-medium text-gray-900 dark:text-gray-300">
+          {option}
+        </label>
+      </div>
+    ))
+  ) : (
+    <p>No property types available</p>
+  )}
+</div>
+
         </div>
       </>
     );
