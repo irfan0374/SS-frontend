@@ -7,7 +7,7 @@ import { userChat } from '../../../Api/chatAxios'
 import { io } from "socket.io-client";
 import Navbar from '../Navbar'
 
-const END_POINT = "http://localhost:3001";
+const END_POINT = "https://irfaan.online";
 let socket;
 
 

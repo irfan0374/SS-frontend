@@ -6,7 +6,7 @@ import { userChat } from '../../../Api/chatAxios'
 import Loading from '../../Loading/Loading'
 import { io } from "socket.io-client";
 
-const END_POINT = "http://localhost:3001";
+const END_POINT = "https://irfaan.online";
 let socket;
 
 
@@ -124,7 +124,6 @@ const MainPage = () => {
       </div>
     </div>
     )}
-        
         </>
     )
 }
