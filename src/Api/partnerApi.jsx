@@ -23,7 +23,7 @@ export const resentOtp=async(partnerId)=>{
     return data
 } 
 export async function addProperty(values){
-    console.log({...values})
+  
     
     const data=await partnerAxiosInstance.post("/addProperty",{...values})
   console.log(data,"addPropertyapi")

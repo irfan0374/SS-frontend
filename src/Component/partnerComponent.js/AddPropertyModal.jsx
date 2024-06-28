@@ -14,15 +14,17 @@ import GoogleSearch from '../userComponent.js/googleSearch'
 
 const AddPropertyModal = () => {
 
+
   const { _id } = useSelector(state => state.partnerReducer.partner)
   const partnerId = _id
   const [loading, setLoading] = useState(false)
   const dispatch = useDispatch()
   const navigate = useNavigate()
+
   const [propertyImage, setPropertyImage] = useState([])
   const [featureField, setFeatureField] = useState([[]])
-  const [location,setLocation]=useState('')
-  const handleAddLocation=(selectLocation)=>{
+  const [location, setLocation] = useState('')
+  const handleAddLocation = (selectLocation) => {
     setLocation(selectLocation.place_name)
   }
 
@@ -31,7 +33,7 @@ const AddPropertyModal = () => {
   const onSubmit = async () => {
     try {
       setLoading(true)
-      const res = await addProperty({ ...values, propertyImage, bhk, propertyFor, partnerId, featureField,location })
+      const res = await addProperty({ ...values, propertyImage, bhk, propertyFor, partnerId, featureField, location })
       if (res?.status === 200) {
 
         setLoading(false)
@@ -44,7 +46,7 @@ const AddPropertyModal = () => {
         document.getElementById('my_modal_4').close();
         navigate('/partner/partnerHome')
         toast.success(res.data.message)
-      }else{
+      } else {
         setLoading(false)
       }
 
@@ -83,9 +85,9 @@ const AddPropertyModal = () => {
 
 
   const handleImage = (e) => {
-    const maxlimit=5
+    const maxlimit = 5
     const file = Array.from(e.target.files)
-    const sliceFiles=Array.from(file).slice(0,maxlimit)
+    const sliceFiles = Array.from(file).slice(0, maxlimit)
     setImageToBase(sliceFiles)
   }
 
@@ -228,7 +230,7 @@ const AddPropertyModal = () => {
 
                   Location
                 </label>
-               <GoogleSearch onLocationSelect={handleAddLocation}/>
+                <GoogleSearch onLocationSelect={handleAddLocation} />
               </div>
               <div>
                 <label
@@ -302,7 +304,6 @@ const AddPropertyModal = () => {
                       name="bhk"
                       value="1rk"
                       onChange={e => handleRadioButton2(e)}
-
                       className="form-radio text-blue-500 border-2 border-blue-500 focus:ring-blue-300"
                     />
                     <label htmlFor="1rk" className="text-gray-700">
